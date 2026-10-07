@@ -4,6 +4,7 @@ version = "0.1.0"
 requires-python = ">=3.11,<3.12"
 dependencies = [
     "pyyaml==6.0.2",
+    "datasets>=3.0",  # SciGym のデータを HuggingFace から取る（RIKYU 以外の計算機）
 ]
 
 # `src/` is run with `uv run python -m src.main` from the repository root,

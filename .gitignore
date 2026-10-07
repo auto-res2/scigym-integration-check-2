@@ -203,3 +203,6 @@ models/
 
 # Lean build outputs
 lean/.lake/
+
+# 実行時に HuggingFace から取るベンチマークデータ
+data/scigym_sbml/

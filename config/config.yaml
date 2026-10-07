@@ -1,7 +1,7 @@
 mode: full
 results_dir: .research/results
 
-data_root: /data1/rkp00041/scigym_improvement/data/scigym_sbml  # small / large の親。run の yaml の split で選ぶ
+data_root: data/scigym_sbml  # small / large の親。run の yaml の split で選ぶ。無ければ HuggingFace（h4duan/scigym-sbml）から取得
 base_url: https://ai-gateway.vercel.sh/v1
 max_iterations: 5
 eval_debug_rounds: 3

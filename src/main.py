@@ -74,6 +74,18 @@ def checkpoint(run_dir, name):
         tar.add(out, arcname=f"instances/{name}")
 
 
+def download_split(split, root):
+    """RIKYU 以外の計算機向け。公式 data/download.py と同じ配置で HuggingFace から 1 split を書き出す"""
+    from datasets import load_dataset
+
+    for row in load_dataset("h4duan/scigym-sbml", split=split):
+        d = root / split / row["folder_name"]
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "truth.xml").write_text(row["truth_xml"])
+        (d / "partial.xml").write_text(row["partial"])
+        (d / "truth.sedml").write_text(row["truth_sedml"])
+
+
 def iterations_used(out):
     """提出までに使った反復数。chat_history.yaml の Iteration 0 は初期プロンプトなので除く"""
     history = json.loads((out / "chat_history.yaml").read_text())
@@ -91,6 +103,8 @@ def main():
     split = cfg["run"]["split"]
     cfg = SimpleNamespace(**cfg, run_model=cfg["run"]["model"], data_dir=f"{cfg['data_root']}/{split}", task=f"scigym_{split}")
     run_dir = Path(cfg.results_dir) / run_id
+    if not Path(cfg.data_dir).is_dir():
+        download_split(split, Path(cfg.data_root))
     instances = sorted(p for p in Path(cfg.data_dir).iterdir() if p.is_dir())
     if cfg.mode == "sanity":
         instances = instances[:1]
