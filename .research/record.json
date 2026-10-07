@@ -97,7 +97,80 @@
                     "eval_debug_rounds": 3,
                     "temperature": 1,
                     "max_tokens": 32768
-                  }
+                  },
+                  "results": [
+                    {
+                      "id": "a08221c9-25f0-47b3-885f-bced3b27ffac",
+                      "commit": "1a2edf43072579324cb2436e07092de1495f67ee",
+                      "eval_inputs": {
+                        "path": ".research/results/gemini-3.8-flash/eval_inputs/scigym_small.json.gz",
+                        "sha256": "d6cf789298eb6aac1b0a3bafbbee749c533c42daf1abcf643397ed436f7bd5b4"
+                      },
+                      "eval_report": {
+                        "task_type": "scigym_small",
+                        "task_signature": "scigym_small/v1@139c6084495c",
+                        "inputs_sha256": "83bcae741e66852601e5b66b91b8406661a7913cf544822784de0709caa078eb",
+                        "versions": {
+                          "airas-eval": "0.13.1",
+                          "libroadrunner": "2.7.0",
+                          "python-libsbml": "5.20.4",
+                          "scigym": "0.0.1"
+                        },
+                        "metrics": {
+                          "reaction_f1": 0.5404761904761904,
+                          "reaction_f1_vs_best_published": 0.20217619047619045,
+                          "reaction_f1_with_modifiers": 0.24444444444444446,
+                          "reaction_precision": 0.5927380952380952,
+                          "reaction_precision_with_modifiers": 0.24440476190476187,
+                          "reaction_recall": 0.54,
+                          "reaction_recall_with_modifiers": 0.25666666666666665,
+                          "topology_f1": 0.6154256854256854,
+                          "topology_f1_modifier_product": 0.09642857142857145,
+                          "topology_f1_reactant_modifier": 0.0,
+                          "topology_f1_reactant_product": 0.489272632129775,
+                          "topology_precision": 0.7133333333333334,
+                          "topology_recall": 0.58,
+                          "trajectory_smape": 0.13447043248206506,
+                          "trajectory_smape_vs_best_published": -0.18672956751793493
+                        },
+                        "inputs_summary": {
+                          "n_instances": 10.0,
+                          "n_valid_submissions": 10.0
+                        },
+                        "skipped": {
+                          "missing_dependency": {},
+                          "missing_optional_input": [],
+                          "not_applicable": {},
+                          "undefined_on_data": {}
+                        }
+                      },
+                      "metrics": {
+                        "reaction_f1": 0.5404761904761904,
+                        "reaction_f1_vs_best_published": 0.20217619047619045,
+                        "reaction_f1_with_modifiers": 0.24444444444444446,
+                        "reaction_precision": 0.5927380952380952,
+                        "reaction_precision_with_modifiers": 0.24440476190476187,
+                        "reaction_recall": 0.54,
+                        "reaction_recall_with_modifiers": 0.25666666666666665,
+                        "topology_f1": 0.6154256854256854,
+                        "topology_f1_modifier_product": 0.09642857142857145,
+                        "topology_f1_reactant_modifier": 0.0,
+                        "topology_f1_reactant_product": 0.489272632129775,
+                        "topology_precision": 0.7133333333333334,
+                        "topology_recall": 0.58,
+                        "trajectory_smape": 0.13447043248206506,
+                        "trajectory_smape_vs_best_published": -0.18672956751793493,
+                        "n_instances": 10.0,
+                        "n_valid_submissions": 10.0,
+                        "input_tokens": 537359,
+                        "output_tokens": 129848,
+                        "mean_iterations": 5.7,
+                        "n_early_submit": 0,
+                        "n_context_overflow": 0,
+                        "n_not_finished": 0
+                      }
+                    }
+                  ]
                 }
               ],
               "quoted_passage_ids": [
@@ -137,6 +210,8 @@
             "s1.p1",
             "s1.p3"
           ],
+          "verified": true,
+          "verdict": "supported",
           "criterion": {
             "metric": "trajectory_smape",
             "subject": "gemini-3.8-flash",
