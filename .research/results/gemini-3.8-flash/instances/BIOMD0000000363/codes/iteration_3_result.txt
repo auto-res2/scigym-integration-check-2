@@ -1,0 +1,11 @@
+Your code is successfully executed.
+Below is the standard out from your code.
+Matrix K^T:
+              id_7zj4       id_3vln   id_51dd       id_jktq
+id_7zj4 -5.010000e-03 -1.015252e-08  0.000006 -1.137776e-08
+id_3vln  5.000013e-03 -1.000020e-02  0.000073 -1.430492e-07
+id_51dd  1.000000e-05  2.038925e-11 -0.000025  2.284427e-11
+id_jktq -1.123511e-08  1.000030e-02 -0.000095  2.344647e-07
+Max abs error in dX/dt: 6.79686168801423e-08
+Relative error: 1.3566590148814269e-05
+

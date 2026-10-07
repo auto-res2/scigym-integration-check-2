@@ -1,0 +1,38 @@
+{
+    "0": {
+        "request": {
+            "experiment_action": []
+        },
+        "success": true
+    },
+    "1": {
+        "request": {
+            "experiment_action": [
+                "change_initial_concentration(\"id_unf3\", 2.0)",
+                "change_initial_concentration(\"id_8zfj\", 2.0)",
+                "change_initial_concentration(\"id_0art\", 2.0)",
+                "change_initial_concentration(\"id_uenr\", 2.0)",
+                "change_initial_concentration(\"id_dk7v\", 2.0)",
+                "change_initial_concentration(\"id_bjlo\", 2.0)",
+                "change_initial_concentration(\"id_56er\", 2.0)",
+                "change_initial_concentration(\"id_7iiw\", 2.0)"
+            ]
+        },
+        "success": true
+    },
+    "3": {
+        "request": {
+            "experiment_action": [
+                "change_initial_concentration(\"id_unf3\", 1.0)",
+                "change_initial_concentration(\"id_8zfj\", 0.5)",
+                "change_initial_concentration(\"id_0art\", 2.0)",
+                "change_initial_concentration(\"id_uenr\", 1.5)",
+                "change_initial_concentration(\"id_dk7v\", 0.2)",
+                "change_initial_concentration(\"id_bjlo\", 0.8)",
+                "change_initial_concentration(\"id_56er\", 1.2)",
+                "change_initial_concentration(\"id_7iiw\", 0.4)"
+            ]
+        },
+        "success": true
+    }
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="id_w1dz">
+    <listOfUnitDefinitions>
+      <unitDefinition id="id_3x54">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="id_cn8n">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="id_bhfw" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="id_jxje" compartment="id_bhfw" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="id_sywq" compartment="id_bhfw" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="id_7cn0" compartment="id_bhfw" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="id_puar" compartment="id_bhfw" initialConcentration="100000000000" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="v_synth_7cn0" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="id_7cn0" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="id_sywq"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <cn> 33.0337585711498 </cn>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> id_sywq </ci>
+                    <cn> 1.27973154017558 </cn>
+                  </apply>
+                  <cn> 10.3366114145125 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v_deg_7cn0" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_7cn0" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 2.09171910335268 </cn>
+              <ci> id_7cn0 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v_synth_jxje" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="id_jxje" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="id_7cn0"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 1.80301788424097 </cn>
+              <ci> id_7cn0 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v_deg_jxje" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_jxje" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 2.05361597139984 </cn>
+              <ci> id_jxje </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v_synth_sywq" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="id_sywq" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="id_jxje"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 0.854358815531418 </cn>
+              <ci> id_jxje </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v_deg_sywq" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_sywq" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 1.48559664225156 </cn>
+              <ci> id_sywq </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v_growth_puar" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_puar" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_puar" stoichiometry="2"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="id_sywq"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 0.320005690642145 </cn>
+              <ci> id_sywq </ci>
+              <ci> id_puar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

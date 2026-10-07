@@ -1,0 +1,13 @@
+{
+    "observe_smape": 0.0,
+    "pred_length": 3458,
+    "true_length": 3286,
+    "inco_length": 805,
+    "rp_precision": 1.0,
+    "rp_recall": 1.0,
+    "rp_f1": 1.0,
+    "rpm_precision": 1.0,
+    "rpm_recall": 1.0,
+    "rpm_f1": 1.0,
+    "success": true
+}

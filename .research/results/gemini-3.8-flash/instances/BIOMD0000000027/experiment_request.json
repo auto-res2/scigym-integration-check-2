@@ -1,0 +1,18 @@
+{
+    "0": {
+        "request": {
+            "experiment_action": []
+        },
+        "success": true
+    },
+    "2": {
+        "request": {
+            "experiment_action": [
+                "change_initial_concentration(\"id_bya5\", 0.0)",
+                "change_initial_concentration(\"id_346h\", 100.0)",
+                "change_initial_concentration(\"id_eyok\", 0.0)"
+            ]
+        },
+        "success": true
+    }
+}

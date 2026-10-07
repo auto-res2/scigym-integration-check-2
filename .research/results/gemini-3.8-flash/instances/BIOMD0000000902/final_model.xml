@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model>
+    <listOfUnitDefinitions>
+      <unitDefinition id="id_7csq">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="id_lq3m">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="86400"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="id_9ud5">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="id_7vtz" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="id_mmpx" compartment="id_7vtz" initialConcentration="100" boundaryCondition="false" constant="false"/>
+      <species id="id_nmjc" compartment="id_7vtz" initialConcentration="800" boundaryCondition="false" constant="false"/>
+      <species id="id_2ba8" compartment="id_7vtz" initialConcentration="200" boundaryCondition="false" constant="false"/>
+      <species id="id_4o87" compartment="id_7vtz" initialConcentration="0" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="k_N" value="1" constant="true"/>
+      <parameter id="k_M" value="1" constant="true"/>
+      <parameter id="k_B" value="1" constant="true"/>
+      <parameter id="k_NM" value="1" constant="true"/>
+      <parameter id="k_NB" value="1" constant="true"/>
+      <parameter id="k_MB" value="1" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="reaction_1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_nmjc" stoichiometry="1"/>
+          <speciesReference species="id_nmjc" stoichiometry="30.2505861678984"/>
+          <speciesReference species="id_2ba8" stoichiometry="16.4129849980526"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_mmpx" stoichiometry="58.7194798377995"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> id_nmjc </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_mmpx" stoichiometry="1"/>
+          <speciesReference species="id_mmpx" stoichiometry="0.494603854534662"/>
+          <speciesReference species="id_nmjc" stoichiometry="0.00145068196752542"/>
+          <speciesReference species="id_2ba8" stoichiometry="0.594533322965192"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> id_mmpx </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_2ba8" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_mmpx" stoichiometry="1.17210703983947e-06"/>
+          <speciesReference species="id_2ba8" stoichiometry="0.00521221152268418"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> id_2ba8 </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_nmjc" stoichiometry="1"/>
+          <speciesReference species="id_mmpx" stoichiometry="1"/>
+          <speciesReference species="id_nmjc" stoichiometry="0.00831651895910567"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_mmpx" stoichiometry="0.0167213901156731"/>
+          <speciesReference species="id_2ba8" stoichiometry="0.000924268936364686"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> id_nmjc </ci>
+              <ci> id_mmpx </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_nmjc" stoichiometry="1"/>
+          <speciesReference species="id_2ba8" stoichiometry="1"/>
+          <speciesReference species="id_mmpx" stoichiometry="0.290956426064795"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_nmjc" stoichiometry="0.144986368314871"/>
+          <speciesReference species="id_2ba8" stoichiometry="0.0816302272258262"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> id_nmjc </ci>
+              <ci> id_2ba8 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_6" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_mmpx" stoichiometry="1"/>
+          <speciesReference species="id_2ba8" stoichiometry="1"/>
+          <speciesReference species="id_mmpx" stoichiometry="8.58983156951461e-06"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_nmjc" stoichiometry="4.28732949853744e-06"/>
+          <speciesReference species="id_2ba8" stoichiometry="0.00275738996972692"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> id_mmpx </ci>
+              <ci> id_2ba8 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

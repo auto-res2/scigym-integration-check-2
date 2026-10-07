@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="id_pblp">
+    <listOfUnitDefinitions>
+      <unitDefinition id="id_ygm1">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="id_pi23">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="86400"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="id_mtzg">
+        <listOfUnits>
+          <unit kind="item" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="id_eh9b" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="id_g1f8" compartment="id_eh9b" initialConcentration="200000" boundaryCondition="false" constant="false"/>
+      <species id="id_getd" compartment="id_eh9b" initialConcentration="2750000" boundaryCondition="false" constant="false"/>
+      <species id="id_vlky" compartment="id_eh9b" initialConcentration="7200000" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="reaction_g" reversible="true">
+        <listOfProducts>
+          <speciesReference species="id_g1f8" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="id_getd"/>
+          <modifierSpeciesReference species="id_vlky"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> id_g1f8 </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <cn type="e-notation"> 4.1354869224 <sep/> -2 </cn>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn type="e-notation"> 1.9338430504 <sep/> -10 </cn>
+                  <ci> id_g1f8 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn type="e-notation"> 2.9881230956 <sep/> -10 </cn>
+                  </apply>
+                  <ci> id_getd </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn type="e-notation"> 1.4543343576 <sep/> -13 </cn>
+                  </apply>
+                  <ci> id_vlky </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_d" reversible="true">
+        <listOfProducts>
+          <speciesReference species="id_getd" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="id_g1f8"/>
+          <modifierSpeciesReference species="id_vlky"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> id_getd </ci>
+              <apply>
+                <plus/>
+                <cn type="e-notation"> 1.2999675199 <sep/> -1 </cn>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn type="e-notation"> 1.1009801878 <sep/> -7 </cn>
+                  </apply>
+                  <ci> id_g1f8 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn type="e-notation"> 3.5998790048 <sep/> -8 </cn>
+                  </apply>
+                  <ci> id_getd </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn type="e-notation"> 1.1153928499 <sep/> -13 </cn>
+                  </apply>
+                  <ci> id_vlky </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_v" reversible="true">
+        <listOfProducts>
+          <speciesReference species="id_vlky" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="id_g1f8"/>
+          <modifierSpeciesReference species="id_getd"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> id_vlky </ci>
+              <apply>
+                <plus/>
+                <cn type="e-notation"> 2.4507318615 <sep/> -2 </cn>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn type="e-notation"> 9.55965133 <sep/> -12 </cn>
+                  </apply>
+                  <ci> id_g1f8 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn type="e-notation"> 1.9973826268 <sep/> -12 </cn>
+                  </apply>
+                  <ci> id_getd </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn type="e-notation"> 2.4500109696 <sep/> -9 </cn>
+                  </apply>
+                  <ci> id_vlky </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

@@ -1,0 +1,21 @@
+Your code is successfully executed.
+Below is the standard out from your code.
+Correlations for dx:
+  x: 0.0029
+  y: -0.5551
+  z: 0.8178
+  1/(1+z^2): -0.6474
+  1/(1+y^2): 0.4541
+  1/(1+x^2): -0.0019
+dy = 2.2631 * x - 3.9347 * y, rel err: 0.0626
+dz = -4.6066 * y - -0.7840 * z, rel err: 0.9040
+ddx/dt = -0.0006 * x - 0.0006 * dx, rel err: 1.0000
+ddx/dt = -7.8975 * y - -3.9152 * dx, rel err: 0.6184
+ddx/dt = 1.9088 * z - 2.1979 * dx, rel err: 0.1389
+ddy/dt = 2.2631 * x - 3.9347 * dy, rel err: 0.0626
+ddy/dt = -0.0035 * y - 0.0035 * dy, rel err: 1.0000
+ddy/dt = 0.5457 * z - 0.7905 * dy, rel err: 0.4945
+ddz/dt = -4.5983 * x - -2.1974 * dz, rel err: 0.7876
+ddz/dt = -4.6066 * y - -0.7840 * dz, rel err: 0.9040
+ddz/dt = -0.0006 * z - 0.0006 * dz, rel err: 1.0000
+

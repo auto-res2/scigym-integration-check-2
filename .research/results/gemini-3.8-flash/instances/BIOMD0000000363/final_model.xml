@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="id_0v11">
+    <listOfUnitDefinitions>
+      <unitDefinition id="id_1l7e">
+        <listOfUnits>
+          <unit kind="mole" scale="-6"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="id_wj2s" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="id_51dd" compartment="id_wj2s" initialConcentration="0"/>
+      <species id="id_jktq" compartment="id_wj2s" initialConcentration="0"/>
+      <species id="id_7zj4" compartment="id_wj2s" initialConcentration="1"/>
+      <species id="id_3vln" compartment="id_wj2s" initialConcentration="0"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="r_7zj4_to_3vln" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_7zj4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_3vln" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k1 </ci>
+              <ci> id_7zj4 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="k1" value="0.005"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r_7zj4_to_51dd" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_7zj4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_51dd" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k2 </ci>
+              <ci> id_7zj4 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="k2" value="1e-05"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r_3vln_to_jktq" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_3vln" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_jktq" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k3 </ci>
+              <ci> id_3vln </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="k3" value="0.01"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r_51dd_to_jktq" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="id_51dd" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="id_jktq" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k4 </ci>
+              <ci> id_51dd </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="k4" value="2.5e-05"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
